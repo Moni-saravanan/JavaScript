@@ -1,0 +1,39 @@
+<input type="text" placeholder="num1" id="ip1" required>
+<input type="text" placeholder="num2" id="ip2" required>
+<input type="text" placeholder="operation" id="op" required>
+<button id="btn" onclick="clicked()">Calculate</button>
+<p id="p"></p>
+
+<script>
+    var ip1 = document.getElementById("ip1")
+    var ip2 = document.getElementById("ip2")
+    var op=document.getElementById("op")
+    var para = document.getElementById("p")
+     
+    function clicked()
+    {
+        var ip1val=Number(ip1.value) 
+        var ip2val=Number(ip2.value)
+        var opvalu=String(op.value)
+        if(opvalu=="Addition" || opvalu=="Add")
+        {
+            para.textContent=ip1val+ip2val
+        }
+        else if(opvalu=="Subtraction" || opvalu=="Sub")
+        {
+            para.textContent=ip1val-ip2val
+        }
+        else if(opvalu=="Multiplication" || opvalu=="Mul")
+        {
+            para.textContent=ip1val*ip2val
+        }
+        else if(opvalu=="Division" || opvalu=="Div")
+        {
+            para.textContent=ip1val/ip2val
+        }
+        else if(opvalu=="Modulus" || opvalu=="Mod")
+        {
+            para.textContent=ip1val%ip2val
+        }
+    }
+</script>
